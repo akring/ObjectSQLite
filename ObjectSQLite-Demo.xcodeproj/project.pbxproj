@@ -28,6 +28,11 @@
 		EC97E66D1F18938B00EB29A9 /* SQLiteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97E6651F18938B00EB29A9 /* SQLiteAction.swift */; };
 		EC97E66E1F18938B00EB29A9 /* PublicDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97E6671F18938B00EB29A9 /* PublicDefinition.swift */; };
 		EC97E6701F18955F00EB29A9 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97E66F1F18955F00EB29A9 /* TestModel.swift */; };
+		EC97E6721F189A7500EB29A9 /* Array+JSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97E6711F189A7500EB29A9 /* Array+JSONTests.swift */; };
+		EC97E6741F189D0700EB29A9 /* Dictionary+JSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97E6731F189D0700EB29A9 /* Dictionary+JSONTests.swift */; };
+		EC97E6761F189E1700EB29A9 /* String+JSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97E6751F189E1700EB29A9 /* String+JSONTests.swift */; };
+		EC97E6781F18A3D800EB29A9 /* NSObject+SQLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97E6771F18A3D800EB29A9 /* NSObject+SQLiteTests.swift */; };
+		EC97E67A1F18AD1000EB29A9 /* SQLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97E6791F18AD1000EB29A9 /* SQLiteTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +103,11 @@
 		EC97E6651F18938B00EB29A9 /* SQLiteAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteAction.swift; sourceTree = "<group>"; };
 		EC97E6671F18938B00EB29A9 /* PublicDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicDefinition.swift; sourceTree = "<group>"; };
 		EC97E66F1F18955F00EB29A9 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		EC97E6711F189A7500EB29A9 /* Array+JSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+JSONTests.swift"; sourceTree = "<group>"; };
+		EC97E6731F189D0700EB29A9 /* Dictionary+JSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+JSONTests.swift"; sourceTree = "<group>"; };
+		EC97E6751F189E1700EB29A9 /* String+JSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+JSONTests.swift"; sourceTree = "<group>"; };
+		EC97E6771F18A3D800EB29A9 /* NSObject+SQLiteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+SQLiteTests.swift"; sourceTree = "<group>"; };
+		EC97E6791F18AD1000EB29A9 /* SQLiteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteTests.swift; sourceTree = "<group>"; };
 		F55BA45C64307ACE816F2D4E /* Pods-ObjectSQLite-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectSQLite-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectSQLite-Demo/Pods-ObjectSQLite-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +208,11 @@
 			children = (
 				EC97E6501F1892E100EB29A9 /* ObjectSQLiteTests.swift */,
 				EC97E6521F1892E100EB29A9 /* Info.plist */,
+				EC97E6711F189A7500EB29A9 /* Array+JSONTests.swift */,
+				EC97E6731F189D0700EB29A9 /* Dictionary+JSONTests.swift */,
+				EC97E6751F189E1700EB29A9 /* String+JSONTests.swift */,
+				EC97E6771F18A3D800EB29A9 /* NSObject+SQLiteTests.swift */,
+				EC97E6791F18AD1000EB29A9 /* SQLiteTests.swift */,
 			);
 			path = ObjectSQLiteTests;
 			sourceTree = "<group>";
@@ -537,7 +552,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC97E6761F189E1700EB29A9 /* String+JSONTests.swift in Sources */,
+				EC97E6781F18A3D800EB29A9 /* NSObject+SQLiteTests.swift in Sources */,
 				EC97E6511F1892E100EB29A9 /* ObjectSQLiteTests.swift in Sources */,
+				EC97E6741F189D0700EB29A9 /* Dictionary+JSONTests.swift in Sources */,
+				EC97E6721F189A7500EB29A9 /* Array+JSONTests.swift in Sources */,
+				EC97E67A1F18AD1000EB29A9 /* SQLiteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
