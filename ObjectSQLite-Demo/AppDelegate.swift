@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ObjectSQLite-Demo
 //
-//  Created by diaokediao on 2017/7/14.
+//  Created by lvjun on 2017/7/14.
 //  Copyright © 2017年 lvjun. All rights reserved.
 //
 

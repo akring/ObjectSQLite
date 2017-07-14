@@ -9,10 +9,25 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ObjectSQLite.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>EC97E6261F1892BF00EB29A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC97E6401F1892E100EB29A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC97E6481F1892E100EB29A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
