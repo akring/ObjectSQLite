@@ -11,14 +11,6 @@ import XCTest
 
 class NSObject_SQLiteTests: XCTestCase {
     
-    class TestModel: NSObject {
-        var name:String?
-        var age:String?
-        var gender:String?
-        var job:Array<String>?
-        var infomation:Dictionary<String,Any>?
-    }
-    
     let model = TestModel()
     
     override func setUp() {
@@ -34,6 +26,12 @@ class NSObject_SQLiteTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testGetClassname() {
+        
+        let classname = model.getClassName()
+        XCTAssertEqual(classname, "ObjectSQLiteTests_TestModel")
     }
     
     func testGetAllPropertys() {
