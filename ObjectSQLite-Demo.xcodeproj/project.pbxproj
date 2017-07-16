@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		170D460BF5A0698EB03EFA5F /* Pods_ObjectSQLite_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6AD4ABDADD63C26462A485 /* Pods_ObjectSQLite_Demo.framework */; };
 		48E5B509B623D13A5EBF7ECC /* Pods_ObjectSQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF724AA17917580501B54DCC /* Pods_ObjectSQLite.framework */; };
+		5700F0BD1F1B492E00E1458B /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5700F0BC1F1B492E00E1458B /* TestModel.swift */; };
 		8747DB6E260FCD5E2F781B20 /* Pods_ObjectSQLiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71AC5CB5381CE1AA9E4B84E /* Pods_ObjectSQLiteTests.framework */; };
 		EC97E62B1F1892BF00EB29A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97E62A1F1892BF00EB29A9 /* AppDelegate.swift */; };
 		EC97E62D1F1892BF00EB29A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97E62C1F1892BF00EB29A9 /* ViewController.swift */; };
@@ -77,6 +78,7 @@
 		02CA2BAB1C84A3EACAF14811 /* Pods-ObjectSQLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectSQLite.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectSQLite/Pods-ObjectSQLite.release.xcconfig"; sourceTree = "<group>"; };
 		03AF43B5EA0FCFBDD7004C86 /* Pods-ObjectSQLiteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectSQLiteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectSQLiteTests/Pods-ObjectSQLiteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F6AD4ABDADD63C26462A485 /* Pods_ObjectSQLite_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectSQLite_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5700F0BC1F1B492E00E1458B /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		769B9224E249B0885BF506CE /* Pods-ObjectSQLite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectSQLite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectSQLite/Pods-ObjectSQLite.debug.xcconfig"; sourceTree = "<group>"; };
 		B0174234183341487BA49FE1 /* Pods-ObjectSQLite-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectSQLite-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectSQLite-Demo/Pods-ObjectSQLite-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		B70111EF3A1635B3028C6665 /* Pods-ObjectSQLiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectSQLiteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectSQLiteTests/Pods-ObjectSQLiteTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,8 +208,9 @@
 		EC97E64F1F1892E100EB29A9 /* ObjectSQLiteTests */ = {
 			isa = PBXGroup;
 			children = (
-				EC97E6501F1892E100EB29A9 /* ObjectSQLiteTests.swift */,
+				5700F0BC1F1B492E00E1458B /* TestModel.swift */,
 				EC97E6521F1892E100EB29A9 /* Info.plist */,
+				EC97E6501F1892E100EB29A9 /* ObjectSQLiteTests.swift */,
 				EC97E6711F189A7500EB29A9 /* Array+JSONTests.swift */,
 				EC97E6731F189D0700EB29A9 /* Dictionary+JSONTests.swift */,
 				EC97E6751F189E1700EB29A9 /* String+JSONTests.swift */,
@@ -555,6 +558,7 @@
 				EC97E6761F189E1700EB29A9 /* String+JSONTests.swift in Sources */,
 				EC97E6781F18A3D800EB29A9 /* NSObject+SQLiteTests.swift in Sources */,
 				EC97E6511F1892E100EB29A9 /* ObjectSQLiteTests.swift in Sources */,
+				5700F0BD1F1B492E00E1458B /* TestModel.swift in Sources */,
 				EC97E6741F189D0700EB29A9 /* Dictionary+JSONTests.swift in Sources */,
 				EC97E6721F189A7500EB29A9 /* Array+JSONTests.swift in Sources */,
 				EC97E67A1F18AD1000EB29A9 /* SQLiteTests.swift in Sources */,

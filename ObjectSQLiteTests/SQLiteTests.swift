@@ -7,22 +7,62 @@
 //
 
 import XCTest
+@testable import ObjectSQLite
 
 class SQLiteTests: XCTestCase {
     
+    let sqlInstance = SQLite.shared
+    var people:TestModel?
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        XCTAssertNotNil(sqlInstance)
+        
+        people = TestModel()
+        XCTAssertNotNil(people)
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sqlInstance.dataBase = nil
+        people = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testConnect() {
+        sqlInstance.connect()
+        XCTAssertNotNil(sqlInstance.dataBase)
+    }
+    
+    func testInsertData() {
+        
+        if let people = people {
+            people.name = "Name"
+            people.age = "30"
+            people.gender = "male"
+            people.job = ["job1", "job2"]
+            people.infomation = ["children":["tom","chris"]]
+            
+            people.sql_saveToDataBase(completeBlock: { (success) in
+                XCTAssertTrue(success)
+            })
+        }
+    }
+    
+    func testFetchData() {
+        
+        SQLite.shared.fetchData(model: TestModel()) { (success, result) in
+            
+            XCTAssertTrue(success)
+            XCTAssertNotNil(result)
+            XCTAssertNotEqual(result?.count, 0)
+            
+            let object = result!.last!
+            let resultJob = ["job1", "job2"]
+            XCTAssertEqual(object.name, "Name")
+            XCTAssertEqual(object.age, "30")
+            XCTAssertEqual(object.gender, "male")
+            XCTAssertEqual(object.job!, resultJob)
+        }
     }
     
     func testPerformanceExample() {
