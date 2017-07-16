@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectSQLite
+import SQLite
 
 class ViewController: UIViewController {
 
@@ -24,10 +25,21 @@ class ViewController: UIViewController {
         people.sql_saveToDataBase { (success) in
             print("数据插入操作结果：\(success)")
         }
-        SQLite.shared.fetchData(model: TestModel()) { (success, result) in
+        SQLite.shared.fetchAllData(model: TestModel()) { (success, result) in
             if success {
                 if let final = result {
                     print(final.first!.infomation!)
+                }
+            }
+        }
+        let name = Expression<String>("name")
+        let filter = Filter(name == "Name")
+        SQLite.shared.fetchData(filter: filter, model: TestModel()) { (success, result) in
+            if success {
+                if let final = result {
+                    print("============条件查询结果=============")
+                    print("查询到: \(final.count) 个结果")
+                    print(final.first!.name!)
                 }
             }
         }

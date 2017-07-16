@@ -9,9 +9,9 @@
 import UIKit
 import SQLite
 
+public typealias Filter = Expression<Bool>
+
 class SQLiteAction: NSObject {
-    
-    
     
     /// 建表操作，如果表已存在则跳过
     ///
@@ -85,25 +85,52 @@ extension SQLiteAction {
 // MARK: - 数据查询方法
 extension SQLiteAction {
     
-    /// 从数据库获取数据
+    
+    
+    /// 从数据库获取所有数据
     ///
     /// - Parameters:
     ///   - dataBase: 数据库
     ///   - model: 数据模型，可为任何继承自NSObject的实例
     ///   - completeBlock: 完成回调
-    func fetchData<T>(dataBase:Connection, model:T, completeBlock:((Bool, [T]?) -> Void)?) -> Void {
+    func fetchAllData<T>(dataBase:Connection, model:T, completeBlock:((Bool, [T]?) -> Void)?) -> Void {
+        
+        execDataFetch(filter: nil, dataBase: dataBase, model: model, completeBlock: completeBlock)
+    }
+    
+    /// 从数据库中根据筛选条件获取数据
+    ///
+    /// - Parameters:
+    ///   - filter: 筛选条件
+    ///   - dataBase: 数据库
+    ///   - model: 数据模型，可为任何继承自NSObject的实例
+    ///   - completeBlock: 完成回调
+    func fetchDataWithFilter<T>(filter:Filter, dataBase:Connection, model:T, completeBlock:((Bool, [T]?) -> Void)?) -> Void {
+        
+        execDataFetch(filter: filter, dataBase: dataBase, model: model, completeBlock: completeBlock)
+    }
+    
+    
+    /// 执行数据查询操作
+    ///
+    /// - Parameters:
+    ///   - filter: 查询条件
+    ///   - dataBase: 数据库
+    ///   - model: 数据模型
+    ///   - completeBlock: 完成回调
+    func execDataFetch<T>(filter:Filter?, dataBase:Connection, model:T, completeBlock:((Bool, [T]?) -> Void)?) -> Void {
         
         if let object = model as? NSObject {
             
             let tableKeys = object.getAllPropertys()
-            
             let expression = getExpression(keyArray: tableKeys)
-            
-            let table = Table(object.getClassName())
+            var table = Table(object.getClassName())
+            if let filter = filter {//如果有查询条件，则匹配查询条件
+                table = table.filter(filter)
+            }
             
             do {
                 let result = try dataBase.prepare(table)
-                
                 let final = result.map({ (obj) -> NSObject in
                     let temp = object
                     for exp in expression {
@@ -141,6 +168,7 @@ extension SQLiteAction {
             }
         }
     }
+        
 }
 
 extension SQLiteAction {

@@ -44,14 +44,20 @@ public class SQLite: NSObject {
     }
     
     
-    /// 数据获取操作
+    /// 获取所有数据操作
     ///
     /// - Parameters:
     ///   - model: 模型实例
     ///   - completeBlock: 完成回调
-    public func fetchData<T>(model:T, completeBlock: @escaping ((Bool, [T]?) -> Void)) -> Void {
+    public func fetchAllData<T>(model:T, completeBlock: @escaping ((Bool, [T]?) -> Void)) -> Void {
         if let dataBase = dataBase {
-            SQLiteAction().fetchData(dataBase: dataBase, model: model, completeBlock: completeBlock)
+            SQLiteAction().fetchAllData(dataBase: dataBase, model: model, completeBlock: completeBlock)
+        }
+    }
+    
+    public func fetchData<T>(filter:Filter, model:T, completeBlock: @escaping ((Bool, [T]?) -> Void)) -> Void {
+        if let dataBase = dataBase {
+            SQLiteAction().fetchDataWithFilter(filter: filter, dataBase: dataBase, model: model, completeBlock: completeBlock)
         }
     }
 }
