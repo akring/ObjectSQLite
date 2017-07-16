@@ -4,7 +4,7 @@ platform :ios, '9.0'
 target 'ObjectSQLite' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'SQLite.swift'
+  pod 'SQLite.swift', git: 'https://github.com/stephencelis/SQLite.swift.git' , branch: 'swift-4'
   # Pods for ObjectSQLite
 
   target 'ObjectSQLiteTests' do
